@@ -18,9 +18,17 @@ test('Survivor who receives 1 Wounds does not die', () => {
   expect(survivor.isAlive()).toBe(true)
 });
 
-test('Survivor who receives 2 Wounds dies immediately; additional Wounds are ignored', () => {
+test('Survivor who receives 2 Wounds dies immediately', () => {
   const survivor = new Survivor('Ford');
   survivor.getsWounded(2);
+
+  expect(survivor.wounds).toBe(2);
+  expect(survivor.isAlive()).toBe(false)
+});
+
+test('additional Wounds (more than 2) are ignored', () => {
+  const survivor = new Survivor('Ford');
+  survivor.getsWounded(3);
 
   expect(survivor.wounds).toBe(2);
   expect(survivor.isAlive()).toBe(false)

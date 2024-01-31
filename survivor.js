@@ -9,6 +9,7 @@ class Survivor {
     this.wounds += n
     if(this.wounds >= 2) {
         this.alive = false
+        this.wounds = 2
     }
     return (this.wounds);
   }
