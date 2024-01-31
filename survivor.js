@@ -4,9 +4,9 @@ class Survivor {
     this.wounds = 0;
   }
 
-  //  age(x) {
-  //    return x - this.year;
-  //  }
+  getsWounded(n) {
+    return (this.wounds += n);
+  }
 }
 
 module.exports = Survivor;
