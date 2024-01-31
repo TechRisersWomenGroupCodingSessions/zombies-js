@@ -1,0 +1,14 @@
+{
+  "name": "zombies",
+  "version": "1.0.0",
+  "description": "https://docs.google.com/document/d/1npAyfsoylONBQRNO-BlHvc0supwLj__neVFLvpcctMc/edit#heading=h.9lztwwh05xx4",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.7.0"
+  }
+}
