@@ -2,10 +2,19 @@ class Survivor {
   constructor(name) {
     this.name = name;
     this.wounds = 0;
+    this.alive = true
   }
 
   getsWounded(n) {
-    return (this.wounds += n);
+    this.wounds += n
+    if(this.wounds >= 2) {
+        this.alive = false
+    }
+    return (this.wounds);
+  }
+
+  isAlive() {
+    return this.alive;
   }
 }
 

@@ -9,9 +9,19 @@ test('Survivor starts with zero wounds', () => {
   const survivor = new Survivor('Ford');
   expect(survivor.wounds).toBe(0);
 });
+
+test('Survivor who receives 1 Wounds does not die', () => {
+  const survivor = new Survivor('Ford');
+  survivor.getsWounded(1);
+
+  expect(survivor.wounds).toBe(1);
+  expect(survivor.isAlive()).toBe(true)
+});
+
 test('Survivor who receives 2 Wounds dies immediately; additional Wounds are ignored', () => {
   const survivor = new Survivor('Ford');
   survivor.getsWounded(2);
 
   expect(survivor.wounds).toBe(2);
+  expect(survivor.isAlive()).toBe(false)
 });
